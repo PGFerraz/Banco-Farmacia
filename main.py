@@ -189,3 +189,44 @@ def listar_vendas():
     if not vendas:
         print("Nenhuma venda registrada.\n")
 
+def menu():
+    while True:
+        print("""
+======== MENU FARMÁCIA ========
+1. Adicionar Cliente
+2. Listar Clientes
+3. Deletar Cliente
+4. Adicionar Produto
+5. Listar Produtos
+6. Deletar Produto
+7. Registrar Venda
+8. Listar Vendas
+0. Sair
+""")
+        opc = input("Escolha: ")
+        if opc == "1":
+            adicionar_cliente()
+        elif opc == "2":
+            listar_clientes()
+        elif opc == "3":
+            deletar_cliente()
+        elif opc == "4":
+            adicionar_produto()
+        elif opc == "5":
+            listar_produtos()
+        elif opc == "6":
+            deletar_produto()
+        elif opc == "7":
+            adicionar_venda()
+        elif opc == "8":
+            listar_vendas()
+        elif opc == "0":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!\n")
+
+
+if __name__ == "__main__":
+    menu()
+
